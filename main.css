@@ -21,7 +21,8 @@ a.btn[href^="tel:"]::before{content:"\260e";margin-right:2px}
 .topbar b{color:var(--pink)}
 nav{background:#fff;box-shadow:0 1px 0 var(--line);position:relative;z-index:50}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
-.logo{font-family:'Outfit';font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo{font-family:'Outfit';font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:9px}
+.logo img{display:block;border-radius:6px}
 .logo span{color:var(--cobalt)}
 .navlinks,.nav-menu{display:flex;align-items:center}
 .navlinks a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;margin-left:20px;position:relative}
