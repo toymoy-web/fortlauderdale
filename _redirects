@@ -1,0 +1,5 @@
+# Cloudflare Pages resolves clean/extensionless URLs and slug/index.html routing
+# natively. Do NOT add rewrite/redirect rules here unless a genuine cross-domain
+# or legacy-path redirect is needed -- stacking .html -> clean-URL rules on top
+# of Cloudflare's native handling has caused ERR_TOO_MANY_REDIRECTS loops before
+# (Section 12, Section 4 of site-build-qa skill). Keep this file comments-only.
