@@ -11,7 +11,7 @@ a{-webkit-tap-highlight-color:transparent}
 .skip-link{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 18px;z-index:999;border-radius:0 0 8px 0}
 .skip-link:focus{left:0}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:700;font-size:16px;padding:15px 28px;text-decoration:none;border-radius:12px;box-shadow:0 10px 24px rgba(255,61,127,.32)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:700;font-size:19px;padding:15px 28px;text-decoration:none;border-radius:12px;box-shadow:0 10px 24px rgba(255,61,127,.32)}
 a.btn[href^="tel:"]::before{content:"\260e";margin-right:2px}
 .btn:hover{background:var(--pink-d)}
 .btn.cobalt{background:var(--cobalt);box-shadow:0 10px 24px rgba(37,71,232,.28)}
@@ -35,7 +35,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .navlinks .dropdown.open .dropdown-menu{display:block}
 .hamburger{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink)}
 .mobile-menu{display:none}
-.hero{background:var(--soft);padding:64px 0;position:relative;overflow:hidden}
+.hero{background:linear-gradient(rgba(243,245,255,.93),rgba(243,245,255,.93)),url(/assets/photos/fort-lauderdale-canal-homes-hero.webp) center/cover no-repeat;padding:64px 0;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1.5px,transparent 1.5px);background-size:26px 26px;opacity:.6;mask-image:linear-gradient(to bottom,black,transparent 80%)}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);color:var(--cobalt);font-weight:700;font-size:13px;padding:8px 15px;border-radius:100px;margin-bottom:18px}
@@ -118,6 +118,20 @@ footer a:hover{color:var(--cobalt)}
 .social-links a{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--soft);color:var(--cobalt);margin-bottom:0}
 .social-links a:hover{background:var(--cobalt);color:#fff}
 .social-links svg{width:16px;height:16px;fill:currentColor}
+.photoband{margin:0}
+.photoband img{width:100%;height:auto;max-height:460px;object-fit:cover;display:block}
+.photoband figcaption{background:var(--soft);color:var(--gray);font-size:13px;text-align:center;padding:10px 16px}
+.blog-card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 44px rgba(21,23,38,.06);padding:40px}
+@media(max-width:768px){.blog-card{padding:24px 20px;border-radius:16px}}
+.floating-call{display:none}
+@media(min-width:769px){
+  .floating-call{display:flex;align-items:center;justify-content:center;position:fixed;bottom:28px;right:28px;width:56px;height:56px;border-radius:50%;background:var(--pink);color:#fff;font-size:24px;text-decoration:none;box-shadow:0 12px 28px rgba(255,61,127,.4);z-index:90;transition:opacity .2s ease}
+  .floating-call:hover{background:var(--pink-d)}
+}
+.zips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.zip-chip{background:var(--cobalt);color:#fff;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:100px;letter-spacing:.02em}
+.badge-alt{display:inline-flex;align-items:center;gap:7px;background:var(--cobalt);color:#fff;border:none;font-weight:700;font-size:13px;padding:8px 15px;border-radius:100px;margin-bottom:18px}
+.badge-alt:before{content:"\25cf";color:var(--pink);font-size:10px}
 .footer-bottom{border-top:1px solid var(--line);margin-top:30px;padding-top:20px;font-size:12.5px;color:var(--gray);max-width:1180px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
 .pagehead{background:var(--soft);padding:48px 0}
 .pagehead .wrap{display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center}
@@ -159,6 +173,12 @@ footer a:hover{color:var(--cobalt)}
 .comp.diy li:before{content:"✕ ";color:#C0392B;font-weight:700}
 .comp.pro li{color:#C9CBE0}
 .comp.pro li:before{content:"✓ ";color:var(--pink);font-weight:700}
+.comp.opt-a{background:var(--soft)}
+.comp.opt-b{background:var(--ink);color:#fff}
+.comp.opt-b h3{color:var(--pink)}
+.comp.opt-a li:before{content:"• ";color:var(--cobalt);font-weight:700}
+.comp.opt-b li{color:#C9CBE0}
+.comp.opt-b li:before{content:"• ";color:var(--pink);font-weight:700}
 .pricebox{background:var(--soft);border-radius:18px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px;flex-wrap:wrap}
 .pricebox b{font-family:'Outfit';font-size:22px;color:var(--ink)}
 .pricebox span{color:var(--gray);font-size:13.5px;display:block}
@@ -173,8 +193,6 @@ footer a:hover{color:var(--cobalt)}
 .rel a:hover{box-shadow:0 12px 28px rgba(21,23,38,.10)}
 .rel b{font-family:'Outfit';font-size:15.5px;display:block;margin-bottom:4px}
 .rel span{font-size:13.5px;color:var(--gray)}
-.zips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.zip{background:#fff;border:1px solid var(--line);border-radius:100px;padding:6px 13px;font-weight:700;font-size:13px;color:var(--cobalt)}
 .localgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .local{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
 .local h3{font-size:17px;margin-bottom:5px}
@@ -202,7 +220,7 @@ footer a:hover{color:var(--cobalt)}
   .hamburger{display:block}
   .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:#fff;padding:12px 18px;justify-content:space-between;align-items:center;z-index:90;box-shadow:0 -8px 24px rgba(0,0,0,.18)}
   .sticky-cta a{color:#fff;text-decoration:none;font-weight:700;font-family:'Outfit'}
-  .sticky-cta .btn{padding:11px 20px;font-size:14.5px}
+  .sticky-cta .btn{padding:11px 20px;font-size:14.5px;background:#D8336B}
   body{padding-bottom:64px}
   .cards,.why,.rel,.factors,.areas{grid-template-columns:1fr}
 }
